@@ -31,18 +31,20 @@
             btnLogin = new Button();
             label1 = new Label();
             label2 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            txtUsuario = new TextBox();
+            txtContraseña = new TextBox();
+            btnRegresar = new Button();
             SuspendLayout();
             // 
             // btnLogin
             // 
-            btnLogin.Location = new Point(327, 319);
+            btnLogin.Location = new Point(327, 189);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(94, 29);
             btnLogin.TabIndex = 0;
             btnLogin.Text = "Login";
             btnLogin.UseVisualStyleBackColor = true;
+            btnLogin.Click += btnLogin_Click;
             // 
             // label1
             // 
@@ -62,32 +64,43 @@
             label2.TabIndex = 2;
             label2.Text = "Contraseña";
             // 
-            // textBox1
+            // txtUsuario
             // 
-            textBox1.Location = new Point(228, 52);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(309, 27);
-            textBox1.TabIndex = 3;
+            txtUsuario.Location = new Point(228, 52);
+            txtUsuario.Name = "txtUsuario";
+            txtUsuario.Size = new Size(309, 27);
+            txtUsuario.TabIndex = 3;
             // 
-            // textBox2
+            // txtContraseña
             // 
-            textBox2.Location = new Point(228, 131);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(309, 27);
-            textBox2.TabIndex = 4;
+            txtContraseña.Location = new Point(228, 131);
+            txtContraseña.Name = "txtContraseña";
+            txtContraseña.Size = new Size(309, 27);
+            txtContraseña.TabIndex = 4;
+            // 
+            // btnRegresar
+            // 
+            btnRegresar.Location = new Point(12, 409);
+            btnRegresar.Name = "btnRegresar";
+            btnRegresar.Size = new Size(94, 29);
+            btnRegresar.TabIndex = 7;
+            btnRegresar.Text = "Regresar";
+            btnRegresar.UseVisualStyleBackColor = true;
             // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(btnRegresar);
+            Controls.Add(txtContraseña);
+            Controls.Add(txtUsuario);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(btnLogin);
             Name = "Login";
             Text = "Login";
+            Load += Login_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -97,7 +110,8 @@
         private Button btnLogin;
         private Label label1;
         private Label label2;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox txtUsuario;
+        private TextBox txtContraseña;
+        private Button btnRegresar;
     }
 }
